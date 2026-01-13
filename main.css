@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #1b1919;
+  font-family: Inter, sans-serif;
+}
+
+.page {
+  width: 1440px;
+  height: 1024px;
+  padding: 60px 168px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  max-width: 728px;
+}
+
+.avatar {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.greeting {
+  font-family: "HanziPen TC", cursive;
+  font-size: 24px;
+  line-height: 32px;
+  color: #898989;
+  margin: 0 0 24px;
+}
+
+.about {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.cta {
+  font-family: "HanziPen TC", cursive;
+  font-size: 24px;
+  line-height: 32px;
+  color: #898989;
+  text-decoration: none;
+}
