@@ -62,17 +62,13 @@ body {
   color: #898989;
   text-decoration: none;
 
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease,
-    opacity 0.25s ease;
+  transition: color 0.3s ease;
 }
 
 .contact:hover {
   color: #ffffff;
-  transform: translateX(4px);
-  opacity: 0.9;
 }
+
 
 /* ===== Adaptive ===== */
 @media (max-width: 768px) {
