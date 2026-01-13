@@ -1,54 +1,92 @@
-* {
-  box-sizing: border-box;
+/* ===== Base ===== */
+html,
+body {
+  height: 100%;
 }
 
 body {
   margin: 0;
   background: #1b1919;
-  font-family: Inter, sans-serif;
+  color: #ffffff;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
 }
 
+/* ===== Layout ===== */
 .page {
-  width: 1440px;
-  height: 1024px;
-  padding: 60px 168px 120px;
+  min-height: 100vh;                 /* КЛЮЧЕВАЯ СТРОКА */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between;    /* auto-space между контентом и CTA */
+  padding: 60px 168px 60px;
+  box-sizing: border-box;
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   max-width: 728px;
 }
 
+/* ===== Avatar ===== */
 .avatar {
   width: 132px;
   height: 132px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 40px;
 }
 
+/* ===== Text ===== */
 .greeting {
   font-family: "HanziPen TC", cursive;
   font-size: 24px;
   line-height: 32px;
   color: #898989;
-  margin: 0 0 24px;
+  margin: 0;
 }
 
 .about {
   font-size: 24px;
   line-height: 36px;
   font-weight: 600;
-  color: #ffffff;
   margin: 0;
 }
 
-.cta {
+/* ===== CTA ===== */
+.contact {
+  align-self: flex-start;
   font-family: "HanziPen TC", cursive;
   font-size: 24px;
   line-height: 32px;
   color: #898989;
   text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.contact:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+  opacity: 0.9;
+}
+
+/* ===== Adaptive ===== */
+@media (max-width: 768px) {
+  .page {
+    padding: 32px 20px;
+  }
+
+  .about {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
 }
