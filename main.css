@@ -1,4 +1,8 @@
-/* ===== Base ===== */
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -8,20 +12,19 @@ body {
   margin: 0;
   background: #1b1919;
   color: #ffffff;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 /* ===== Layout ===== */
 .page {
-  min-height: 100vh;                 /* КЛЮЧЕВАЯ СТРОКА */
+  min-height: 100vh;              /* КЛЮЧ */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;    /* auto-space между контентом и CTA */
+  justify-content: space-between; /* Auto между контентом и CTA */
   padding: 60px 168px 60px;
-  box-sizing: border-box;
 }
 
+/* ===== Content ===== */
 .content {
   display: flex;
   flex-direction: column;
@@ -37,7 +40,7 @@ body {
   object-fit: cover;
 }
 
-/* ===== Text ===== */
+/* ===== Greeting ===== */
 .greeting {
   font-family: "HanziPen TC", cursive;
   font-size: 24px;
@@ -46,6 +49,7 @@ body {
   margin: 0;
 }
 
+/* ===== Main text ===== */
 .about {
   font-size: 24px;
   line-height: 36px;
@@ -62,13 +66,13 @@ body {
   color: #898989;
   text-decoration: none;
 
+  /* ВАЖНО: ТОЛЬКО ЦВЕТ */
   transition: color 0.3s ease;
 }
 
 .contact:hover {
   color: #ffffff;
 }
-
 
 /* ===== Adaptive ===== */
 @media (max-width: 768px) {
@@ -86,3 +90,4 @@ body {
     height: 96px;
   }
 }
+
